@@ -137,14 +137,14 @@ class ViewController: UIViewController {
         var hour = Int(timeComponents[0])
         var minute = Int(timeComponents[1])
         
-        if minute! < 30 {
-            let diff = 30 - minute!
+        if minute! < 15 {
+            let diff = 15 - minute!
             minute = 60 - diff
             hour = hour! - 1
         } else {
             minute = minute! - 30
         }
-        
+        hour = hour! - 1
         var dateComponents = DateComponents()
         dateComponents.hour = hour!
         dateComponents.minute = minute!
